@@ -36,7 +36,26 @@ body{
 	position: relative;
 	transition:all 2s ease-in-out;
 }
+.style{
+background-color:#674172;
+width:100px;
+top:0;
+left:0;
+right:0;
+bottom:0;
+margin-top:275px;
+margin-left:633px;
+}
+.upper-boundry-style{
 
+}
+.lower-boudnry-style{
+
+}
+.style1{
+	border-radius:1000px;
+	box-shadow:0px 0px 10px 1000px white;
+}
 </style>
 <div class="upper-boundry"></div>
 
@@ -60,17 +79,28 @@ $('.seperator').click(function(){
  $('.upper-boundry').css({"margin-top":"275px","height":"0px"});
 $('.lower-boundry').css({"height":"0px"});
 setTimeout(function(){
-	$('.seperator').css({"background-color":"#674172","width":"100px","top":"0","left":"0","right":"0","bottom":"0", "margin-top":"275px","margin-left":"633px"});
+	$('.seperator').addClass('style');
 
 },1000);
 setTimeout(function(){
-$('.seperator').css({"border-radius":"1000px","box-shadow":"0px 0px 10px 1000px white"});
+$('.seperator').addClass('style1');
 
 },3000);
 
 
   	});
+
+$('.seperator').dblclick(function(){
+$('.seperator').removeClass('style');
+setTimeout(function(){
+$('.seperator').removeClass('style1');
+$('.seperator').addClass('seperator');
+
+},3000);
+
 });
+});
+  	alert('welcome');
   </script>
 </body>
 
